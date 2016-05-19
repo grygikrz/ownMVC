@@ -10,7 +10,7 @@ class login_model extends model {
 	function run(){
 		$login = $_POST['login'];
 		$password = $_POST['password']; 
-				var_dump($_POST);
+		
 		$question = $this->db->prepare("SELECT id FROM users WHERE login = :login AND password = md5(:password)");
 		$question->execute(array(':login'=> $_POST['login'], ':password' =>$_POST['password']));
 		// var_dump($question);
