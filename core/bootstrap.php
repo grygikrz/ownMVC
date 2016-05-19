@@ -8,15 +8,14 @@ class bootstrap {
 	
 	function __construct(){
 			
-	$url = !empty($_GET['url']) ? $_GET['url'] : null;	
+	$url = !empty($_GET['url']) ? $_GET['url'] : $_GET['url'] = 'index' ;	
 	
 	$url = rtrim( $url,  '/' );		
-	$url = filter_var($_GET['url'], FILTER_SANITIZE_URL);
+	$url = filter_var($url, FILTER_SANITIZE_URL);
 	$url = explode('/', $url);
 
 	$count = count($url);
 	$file = 'controllers/'.$url[0].'.php';
-
 	
 	if(file_exists($file)){
 			if(!empty($url[0])){
@@ -64,13 +63,8 @@ class bootstrap {
 					}else{
 						"method from url not exist";
 					}
-				}else{
-					echo '$url[0] not exist';
 				}
 	
-	}else{
-		echo "Page not exist!";
-		exit();
 		}
 	}
 }
