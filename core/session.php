@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * ownMVC project
+ */
 class session
 {
 	public static function init(){

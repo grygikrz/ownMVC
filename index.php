@@ -1,5 +1,7 @@
 <?php 
-
+/**
+ * ownMVC project
+ */
 	define('CORE', 'core/');
 	
 	require 'core/bootstrap.php';

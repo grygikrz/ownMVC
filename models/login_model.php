@@ -1,6 +1,6 @@
 <?php 
 /**
- * 
+ * ownMVC project
  */
 class login_model extends model {
 	

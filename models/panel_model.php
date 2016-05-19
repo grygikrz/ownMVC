@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * ownMVC project
+ */
 class panel_model extends model {
 	
 	function __construct() {

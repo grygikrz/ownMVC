@@ -1,4 +1,7 @@
-<?php 
+<?php
+/**
+ * ownMVC project
+ */
 $show = new index_model;
 $model = $show->show(); 
 ?>

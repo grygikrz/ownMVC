@@ -1,5 +1,7 @@
 <?php
- 
+ /**
+ * ownMVC project
+ */
  class database extends PDO{
  	
 	function __construct() {

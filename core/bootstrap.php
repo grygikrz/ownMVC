@@ -1,19 +1,20 @@
 <?php
 
 /**
- * 
+ *  ownMVC project
  */
 class bootstrap {
 
 	
 	function __construct(){
-			
+	// if nothing get, show index page
 	$url = !empty($_GET['url']) ? $_GET['url'] : $_GET['url'] = 'index' ;	
-	
 	$url = rtrim( $url,  '/' );		
+	
+	// filter variable
 	$url = filter_var($url, FILTER_SANITIZE_URL);
+	
 	$url = explode('/', $url);
-
 	$count = count($url);
 	$file = 'controllers/'.$url[0].'.php';
 	

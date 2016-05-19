@@ -1,4 +1,7 @@
 <?php
+/**
+ * ownMVC project
+ */
 class panel extends controller {
 	
 	function __construct() {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 
+ * ownMVC project
  */
 class view {
 	
