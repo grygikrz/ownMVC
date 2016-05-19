@@ -7,10 +7,13 @@ class bootstrap {
 
 	
 	function __construct(){
-		
-	if(!empty($_GET['url'])){
+			
+	$url = !empty($_GET['url']) ? $_GET['url'] : null;	
+	
+	$url = rtrim( $url,  '/' );		
 	$url = filter_var($_GET['url'], FILTER_SANITIZE_URL);
 	$url = explode('/', $url);
+
 	$count = count($url);
 	$file = 'controllers/'.$url[0].'.php';
 
@@ -26,7 +29,7 @@ class bootstrap {
 						if(!empty($url[1])){
 
 						
-						//dla debuggera
+						//for debug
 							
 						//	echo '<pre>';
 						//	var_dump($model);
@@ -68,9 +71,6 @@ class bootstrap {
 	}else{
 		echo "Page not exist!";
 		exit();
-	}
-		}else{
-			new controller ('index');
 		}
 	}
 }
