@@ -17,7 +17,7 @@ CREATE TABLE `urls` (
 
 INSERT INTO `urls` (`id`, `title`, `url`) VALUES
 (5, 'Gentle Stream #1 - 11 hours - Gentle Rivers & Streams, nature sound, relaxing water', 'https://www.youtube.com/watch?v=gmar4gh5nIw'),
-(6, 'PHP: Create Your Own MVC (Part 11)', 'https://www.youtube.com/watch?v=Z3-c82u5vP4');
+(6, 'Gentle Stream #1 - 11 hours - Gentle Rivers & Streams, nature sound, relaxing water', 'https://www.youtube.com/watch?v=gmar4gh5nIw');
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
