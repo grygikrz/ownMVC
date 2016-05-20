@@ -11,7 +11,14 @@ class panel extends controller {
 			exit;
 		}	
 		
-$get = new view;
-$get->render('panel/index');
+        parent::__construct();
 	}	
+	
+		function index() {
+		
+        $this->view->render('header');
+        $this->view->render('panel/index');
+        $this->view->render('footer');
+		
+	}
 }

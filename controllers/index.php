@@ -7,8 +7,14 @@
 class index extends controller {
 
 	function __construct() {
-	$get = new view;
-	$get->render('index/index');
-
+        parent::__construct();
+	}
+	
+	function index() {
+		
+        $this->view->render('header');
+        $this->view->render('index/index');
+        $this->view->render('footer');
+		
 	}
 }

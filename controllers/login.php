@@ -9,7 +9,15 @@
 class login extends controller {
 	
 	function __construct() {
-	$get = new view;
-	$get->render('login/index');
+        parent::__construct();
+	}
+	
+	
+		function index() {
+		
+        $this->view->render('header');
+        $this->view->render('login/index');
+        $this->view->render('footer');
+		
 	}
 }

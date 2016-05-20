@@ -24,7 +24,8 @@ class bootstrap {
 					$model = $controller->loadModel($url[0]);
 					// Call view from page controller
 					require $file;
-					new $url[0];
+					$view = new $url[0];
+					$view->index();
 					
 						if(!empty($url[1])){
 
@@ -60,7 +61,7 @@ class bootstrap {
 								
 							 }else{
 							   // echo "method in file method not exist";
-								header("Location: ../index");				            
+								$view->index();				            
 							 }        
 					}else{
 						"method from url not exist";
