@@ -59,13 +59,17 @@ class bootstrap {
 						
 								
 							 }else{
-							   echo "method in file method not exist";
-				            }        
+							   // echo "method in file method not exist";
+								header("Location: ../index");				            
+							 }        
 					}else{
 						"method from url not exist";
 					}
 				}
 	
-		}
+		}else{
+							   // echo "file/page not exist";
+								header("Location: ".DIR."/index");				            
+							 }  
 	}
 }
