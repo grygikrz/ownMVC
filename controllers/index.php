@@ -12,6 +12,7 @@ class index extends controller {
 	
 	function index() {
 		
+		//show something in index page
 		 $this->view->show = $this->model->show();
 		
         $this->view->render('header');
@@ -19,6 +20,7 @@ class index extends controller {
         $this->view->render('footer');
 		
 	}
+	
 
 	// for testing purpose
 		function test($one="",$two="",$three=""){

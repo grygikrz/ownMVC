@@ -26,7 +26,7 @@ class panel extends controller {
 		$this->model->add();
 		
 		$this->view->render('header');
-        $this->view->render('panel/index');
+        $this->view->render('panel/add');
         $this->view->render('footer');
 	}
 }

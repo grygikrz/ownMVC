@@ -18,6 +18,5 @@ class panel_model extends model {
 			$question->bindValue($key, $value);
 		endforeach;
 		$question->execute();
-		echo "Added new link!";
 	}
 }
