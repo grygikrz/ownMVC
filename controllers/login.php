@@ -22,24 +22,10 @@ class login extends controller {
 	}
 		
 		function run(){
-			
-		$array = array('login' => $_POST['login'], 'password' => $_POST['password']);
-	
-		$count = $this->model->check($array);
-		// var_dump($question);
-		
-		if($count > 0){
-			session::init();
-			session::set('loggedIn', true);
-			header('Location: ../login');
-				}else{
-					header('Location: ../index');
-				}
+			$this->model->run();
 		}
-			
+		
 		function logout(){
-				session::destroy();
-				header('location:'.DIR.'/login');
-				exit;
+			$this->model->logout();
 		}
 }

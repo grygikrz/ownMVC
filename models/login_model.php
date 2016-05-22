@@ -16,4 +16,26 @@ class login_model extends model {
 		$count = $obj->rowCount();
 		return $count;
 	}
+	
+			function run(){
+			
+		$array = array('login' => $_POST['login'], 'password' => $_POST['password']);
+	
+		$count = $this->check($array);
+		// var_dump($question);
+		
+		if($count > 0){
+			session::init();
+			session::set('loggedIn', true);
+			header('Location: ../login');
+				}else{
+					header('Location: ../index');
+				}
+		}
+			
+		function logout(){
+				session::destroy();
+				header('location:'.DIR.'/login');
+				exit;
+		}
 }
