@@ -2,12 +2,12 @@
 /**
  * ownMVC project
  */
-$show = new index_model;
-$model = $show->show(); 
-?>
+
+$values = $this->show; ?>
+
 <h1>My Favorite Links</h1>
 <ul>
-<?php foreach($model as $key => $value): ?>
+<?php foreach($values  as $key => $value): ?>
 	<label>Title:</label>
 <li><?php echo $value['title']; ?></li><br />
 	<label>Url:</label>

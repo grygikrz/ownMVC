@@ -7,7 +7,7 @@ class panel_model extends model {
 	function __construct() {
 		parent::__construct();
 	}
-	function add(){
+		function add() {
 		
 		$title = $_POST['title'];
 		$url = $_POST['url'];

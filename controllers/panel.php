@@ -21,4 +21,12 @@ class panel extends controller {
         $this->view->render('footer');
 		
 	}
+		
+		function add() {
+		$this->model->add();
+		
+		$this->view->render('header');
+        $this->view->render('panel/index');
+        $this->view->render('footer');
+	}
 }

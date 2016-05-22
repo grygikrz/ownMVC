@@ -1,24 +1,18 @@
 <?php 
 /**
  * ownMVC project
+ * 
+ * do zmiany:
+ * error
+from model-method to controller repair
+ * 
+ * a jeœli mamy dwa takie same metody np run to ustawiamy namespace
  */
-	define('CORE', 'core/');
-	
-	require 'core/bootstrap.php';
- 	require 'core/controller.php';
-	require 'core/model.php';
- 	require 'core/view.php';
-
-	//
-	//function __autoload($class) {
-   // require CORE . $class .".php";
-	//}
-	
-	//session
-	require 'core/session.php';
-	
-	//dbase
-	require 'core/database.php';
+ 
+ 	//autoload class file
+	function __autoload($class) {
+   require "core/" . $class .".php";
+	}
 	
 	//config
 	require 'config/path.php';
